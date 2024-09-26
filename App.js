@@ -6,16 +6,17 @@ import Navbar from './Layout/Navbar';
 import About from './Layout/About';
 import UploadVideo from './Layout/UploadVideo';
 import VideoStream from './Layout/VideoStream';
+import Showvideo from './Layout/Showvideo';
 function App() {
   return (
-    <div className="App">
+    <div className="App vh-100">
       <Router>
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />}/>
           <Route exact path='/about' element={<About />}/>
           <Route exact path='/uploadVideo' element={<UploadVideo />}/>
-          <Route exact path='/videoStream' element={<VideoStream />}/>
+          <Route exact path='/video/:id' element={<Showvideo />}/>
         </Routes>
       </Router>
 
